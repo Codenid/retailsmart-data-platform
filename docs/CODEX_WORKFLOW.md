@@ -32,6 +32,7 @@
 - No se inventan reglas de negocio ni tecnologías fuera de la vista 08; los supuestos técnicos mínimos quedan documentados.
 - En una fase de aprovisionamiento autorizada, el ciclo `implementar → probar → desplegar → verificar → registrar → continuar` puede avanzar automáticamente entre tareas dependientes.
 - Se mantiene el máximo de tres intentos correctivos por fallo y un commit por incremento.
+- Al cerrar una tarea del backlog con pruebas y documentación completas, hacer `git push origin main` automáticamente y reportar el commit publicado.
 
 
 > Actualiza el estado del Issue en `backlog/BACKLOG.md` y el runbook correspondiente. Resume archivos cambiados, comandos comprobados, recursos GCP realmente validados (si los hay) y próxima tarea sugerida. No continúes implementando.
