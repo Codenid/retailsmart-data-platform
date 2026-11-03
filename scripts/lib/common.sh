@@ -13,7 +13,7 @@ load_config() {
   export PROJECT_ID="${PROJECT_ID:-$(gcloud config get-value project 2>/dev/null || true)}"
   export REGION="${REGION:-us-central1}"
   export ZONE="${ZONE:-us-central1-a}"
-  export RS_ENVIRONMENT="${RS_ENVIRONMENT:-lab}"
+  export RS_ENVIRONMENT="${RS_ENVIRONMENT:-${ENVIRONMENT:-lab}}"
   export RS_LABELS="retailsmart=true,environment=${RS_ENVIRONMENT},managed-by=retailsmart"
   require_var PROJECT_ID
 }

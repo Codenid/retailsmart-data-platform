@@ -51,3 +51,12 @@ Código, documentación y tests presentes; segunda ejecución segura; contrato/v
 
 ## Regla de enfoque para Codex
 Un prompt = una tarea. No reescribir todo el repositorio, no explorar archivos binarios/ZIP ni revisar el modelo completo si los CSV ya cubren la pregunta. Preguntar solo si una decisión cambia el diseño.
+
+## Ejecución incremental autónoma
+- El backlog y la arquitectura aprobada son suficientes para iniciar una tarea.
+- Si falta `backlog/tasks/RS-XXX.md`, generarlo automáticamente a partir del backlog, el mapping ArchiMate y las dependencias existentes; no detenerse únicamente por esa ausencia.
+- Toda tarea generada debe documentar objetivo, alcance, `archimate_id`, recursos GCP, dependencias, criterios de aceptación, pruebas y verificación manual.
+- No inventar requisitos de negocio ni tecnologías ajenas a la arquitectura; documentar únicamente supuestos técnicos mínimos.
+- Respetar dependencias, implementar, probar, verificar, documentar y registrar cada incremento antes de continuar al siguiente.
+- Dentro de la fase de aprovisionamiento autorizada, avanzar automáticamente entre tareas; mantener máximo tres intentos de corrección por fallo.
+- Evitar exploraciones repetitivas o cambios fuera del alcance; registrar avance en el backlog y realizar un commit por incremento.

@@ -26,6 +26,13 @@
 - No usar prompts como «reintenta hasta que funcione» ni ejecutar bucles sin límite.
 - Antes de un comando con potencial de costo, eliminar datos o modificar IAM, solicitar aprobación y mostrar impacto esperado.
 
+## Generación y continuidad de tareas
+- El backlog y el mapping ArchiMate aprobado permiten iniciar una tarea sin esperar otro documento.
+- Si falta `backlog/tasks/RS-XXX.md`, Codex lo genera desde el backlog, el mapping y las dependencias. Debe incluir objetivo, alcance, `archimate_id`, recursos, dependencias, aceptación, pruebas y verificación manual.
+- No se inventan reglas de negocio ni tecnologías fuera de la vista 08; los supuestos técnicos mínimos quedan documentados.
+- En una fase de aprovisionamiento autorizada, el ciclo `implementar → probar → desplegar → verificar → registrar → continuar` puede avanzar automáticamente entre tareas dependientes.
+- Se mantiene el máximo de tres intentos correctivos por fallo y un commit por incremento.
+
 
 > Actualiza el estado del Issue en `backlog/BACKLOG.md` y el runbook correspondiente. Resume archivos cambiados, comandos comprobados, recursos GCP realmente validados (si los hay) y próxima tarea sugerida. No continúes implementando.
 
