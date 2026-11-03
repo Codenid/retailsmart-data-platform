@@ -9,7 +9,7 @@
 
 ## Prompt mínimo reutilizable
 
-> Trabaja en RetailSmart. Lee primero `AGENTS.md`, `docs/PRODUCT.md`, `docs/ROADMAP.md` y `backlog/tasks/RS-XXX.md`. Implementa **solo RS-XXX**. Antes de editar, enumera los archivos a modificar, riesgos y pruebas. No ejecutes nada en GCP sin mi autorización. Después ejecuta `bash scripts/verify-local.sh`, reporta el resultado y entrega los pasos de verificación manual en GCP. No avances al siguiente Issue.
+> Trabaja en RetailSmart. Lee primero `AGENTS.md`, `docs/PRODUCT.md`, `docs/ROADMAP.md` y `backlog/tasks/RS-XXX.md`. Implementa **solo la fase autorizada** y sus incrementos dependientes. Dentro de ella puedes editar, probar, consultar y aprovisionar sin pedir aprobación por cada paso. Antes de crear Composer, clústeres persistentes o recursos de costo fijo significativo, muestra estimación y solicita autorización. Después ejecuta `bash scripts/verify-local.sh`, reporta el resultado y entrega los pasos de verificación manual en GCP.
 
 ## Ciclo de control
 `Issue → rama → plan Codex → revisión humana → código → tests → verificación GCP manual → PR → merge → siguiente Issue`.
@@ -22,7 +22,7 @@
 ## Presupuesto de iteración por Issue
 - **1 Issue por tarea de Codex**; no continuar al siguiente sin aprobación.
 - **Hasta 3 intentos correctivos por fallo**. Si continúa fallando, detenerse y pedir decisión.
-- El plan se aprueba antes de editar, y el despliegue GCP requiere una aprobación **independiente**.
+- La fase se aprueba como unidad; los incrementos internos continúan automáticamente mientras no exista un bloqueo de seguridad o costo.
 - No usar prompts como «reintenta hasta que funcione» ni ejecutar bucles sin límite.
 - Antes de un comando con potencial de costo, eliminar datos o modificar IAM, solicitar aprobación y mostrar impacto esperado.
 

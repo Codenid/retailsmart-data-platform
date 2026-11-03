@@ -15,12 +15,12 @@ Implementar **RetailSmart Data Platform** en GCP, reproducible, trazable y verif
 - **No inventar ni omitir componentes** de la vista 08. Identificar cada implementación con su `archimate_id`. Una equivalencia requiere ADR aprobada.
 - **Sin Terraform**, sin Kubernetes y sin frameworks adicionales por comodidad. Bash + gcloud; Python/Beam/PySpark/SQL según el componente definido.
 - Los scripts GCP serán **idempotentes**: si existe verificar estado/configuración; si coincide, conservar; si diverge, informar y pedir decisión. `PERMISSION_DENIED` NO significa que el recurso no exista.
-- Ningún despliegue, cambio de IAM, publicación externa o destrucción sin aprobación humana explícita. Para destruir se exige `PROJECT_ID` y confirmación explícita. Nada de `--quiet` en destrucción por defecto.
+- Dentro de una fase de aprovisionamiento explícitamente autorizada, Codex puede implementar, probar, consultar y ejecutar cambios en el proyecto configurado sin pedir aprobación por cada paso. Se mantiene aprobación humana explícita para proyectos, billing, IAM fuera del alcance aprobado, recursos de costo fijo significativo, publicación externa y destrucción. Para destruir se exige `PROJECT_ID` y confirmación explícita. Nada de `--quiet` en destrucción por defecto.
 - No copiar secretos ni credenciales a Git. Preferir credenciales de usuario de Cloud Shell o identidad adjunta a runtime; evitar service-account keys.
 - **El estado de la empresa sintética sobrevive** a `destroy.sh`: nunca eliminarlo desde los scripts del laboratorio.
 - Mantener **seis productores streaming y seis batch**; los casos de uso pueden consumir subconjuntos pero el universo se produce completo.
 - Contratos y claves compartidas para los dos caminos. Los defectos de calidad se inyectan de forma configurable **después** de crear el evento válido y con trazabilidad del original.
-- No sustituir Dataflow, Dataproc, Airflow administrado, Knowledge Catalog, Looker u otras tecnologías de la vista 08 sin un ADR y aprobación. Controlar costos y ciclo de vida.
+- No sustituir Dataflow, Dataproc, Airflow administrado, Knowledge Catalog, Looker u otras tecnologías de la vista 08 sin un ADR y aprobación. Controlar costos y ciclo de vida. Antes de crear Composer, clústeres persistentes o cualquier recurso de costo fijo significativo, mostrar estimación y solicitar autorización.
 - Cada incremento entrega `script + prueba automatizada de datos pequeños + guía de verificación manual en GCP`.
 - Preferir código directo, funciones pequeñas, stdlib cuando sea suficiente; sin abstracciones genéricas ni cambios fuera del Issue.
 - Streaming: conservar las bifurcaciones de `Tópico Eventos Retail` hacia raw y procesamiento de baja latencia; no serializarlas artificialmente.
@@ -37,7 +37,7 @@ Implementar **RetailSmart Data Platform** en GCP, reproducible, trazable y verif
 
 ## Control estricto de iteraciones y autonomía
 - **No ejecutar ciclos autónomos entre Issues.** Un Issue por sesión/tarea; el cierre exige detenerse y esperar nueva instrucción del usuario.
-- **Planificación y aprobación:** antes de modificar código, entregar un plan acotado y esperar aprobación explícita. La aprobación de código NO implica permiso para desplegar en GCP.
+- **Autonomía por fase autorizada:** una vez aprobada una fase, implementar, probar, desplegar y verificar sus incrementos dependientes sin pedir aprobación por cada archivo o paso. La autorización no incluye proyectos nuevos, billing, destrucción ni recursos de costo fijo significativo.
 - **Presupuesto de corrección:** máximo **3 intentos de solución** ante un mismo fallo. Un intento es: cambiar código/configuración y repetir la prueba afectada. Si persiste el error tras el tercero, detenerse, explicar causa probable y solicitar decisión. No reiniciar el contador cambiando el texto del error sin fundamento.
 - **Sin bucles abiertos:** no crear ni ejecutar `while true`, reintentos ilimitados, auto-invocaciones, agentes recursivos o "continúa hasta terminar". Los procesos de streaming de larga duración son una excepción técnica **solo cuando forman parte explícita del Issue**, se ejecutan como servicio supervisado y tienen condiciones de parada/observabilidad.
 - **Límite de alcance:** si la tarea revela otra dependencia, riesgo inesperado, necesidad de ADR o ampliación sustancial, detenerse y pedir autorización; no incorporar silenciosamente otro Issue.

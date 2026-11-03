@@ -6,7 +6,7 @@
 |---|---|---|---|---|
 | RS-001 | G0 | Bootstrap, vista 08, AGENTS.md y pruebas locales | — | PREPARADO |
 | RS-002 | G0 | Catálogo y 12 contratos; estados/IDs/manifest comunes al simulador | RS-001 | TODO |
-| RS-003 | G1 | Config GCP, validaciones, APIs habilitadas, IAM base, budgets/alertas propuestas | RS-001 | TODO |
+| RS-003 | G1 | Config GCP, validaciones, APIs habilitadas, IAM base, budgets/alertas propuestas | RS-001 | EN PROGRESO |
 | RS-004 | G1 | Storage: Landing/Bronze/Silver; buckets y estructuras idempotentes | RS-003 | TODO |
 | RS-005 | G1 | Mensajería: retail/audit/insights, subscriptions y políticas | RS-003 | TODO |
 | RS-006 | G1 | Dataflow, Dataproc, Airflow, BigQuery, Cloud Run, catálogo/seguridad: recursos y configuraciones + costo + status, sin jobs activos si no hay pruebas | RS-003/004/005 | TODO |
