@@ -12,9 +12,22 @@ log "RS-003 preflight para $PROJECT_ID en $REGION"
 require_project_context
 log "Identidad activa: $(gcloud auth list --filter=status:ACTIVE --format='value(account)' | head -n1)"
 log "Facturación: $(gcloud billing projects describe "$PROJECT_ID" --format='value(billingEnabled)' 2>/dev/null || printf 'no verificable')"
+enabled_apis=""
+if ! $DRY_RUN; then
+  enabled_apis="$(gcloud_run services list --enabled --format='value(config.name)')"
+fi
+missing_apis=()
 for api in "${apis[@]}"; do
-  if $DRY_RUN; then log "DRY-RUN verificar API $api"; continue; fi
-  state="$(gcloud_run services list --enabled --filter="config.name=$api" --format='value(config.name)' 2>/dev/null || true)"
-  [[ "$state" == "$api" ]] && log "API habilitada: $api" || log "API pendiente/no verificable: $api"
+  if $DRY_RUN; then
+    log "DRY-RUN verificar API $api"
+  elif grep -Fxq "$api" <<<"$enabled_apis"; then
+    log "API habilitada: $api"
+  else
+    missing_apis+=("$api")
+  fi
 done
+if (( ${#missing_apis[@]} > 0 )); then
+  log "Habilitando APIs pendientes: ${missing_apis[*]}"
+  gcloud_run services enable "${missing_apis[@]}"
+fi
 log "No se crean jobs, Composer, clusters Dataproc ni recursos de costo fijo en RS-003"

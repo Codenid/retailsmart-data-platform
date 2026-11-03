@@ -25,7 +25,7 @@ resource_exists() {
     bucket) gcloud_run storage buckets describe "gs://$name" >/dev/null 2>&1 ;;
     topic) gcloud_run pubsub topics describe "$name" >/dev/null 2>&1 ;;
     subscription) gcloud_run pubsub subscriptions describe "$name" >/dev/null 2>&1 ;;
-    dataset) gcloud_run bigquery datasets describe "$name" >/dev/null 2>&1 ;;
+    dataset) bq --project_id="$PROJECT_ID" show --format=prettyjson "$name" >/dev/null 2>&1 ;;
     service-account) gcloud_run iam service-accounts describe "$name" >/dev/null 2>&1 ;;
     *) die "tipo de recurso no soportado: $kind"; return 1 ;;
   esac
