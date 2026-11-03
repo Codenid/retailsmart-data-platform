@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "simulation_id": "sim-20261103-001",
+  "producer_id": "inventory-erp",
+  "dataset": "inventory_snapshot",
+  "batch_id": "batch-inventory-20261103",
+  "effective_at": "2026-11-03T23:59:59Z",
+  "file_format": "parquet",
+  "object_path": "landing/inventory-erp/dt=2026-11-03/inventory.parquet",
+  "record_count": 10000,
+  "checksum_sha256": "REPLACE_WITH_ACTUAL_CHECKSUM",
+  "contract_version": "1.0.0"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "realistic-medium",
+  "rates_pct": {
+    "missing": 1.0,
+    "duplicate": 0.5,
+    "late": 2.0,
+    "out_of_order": 1.0,
+    "outlier": 1.0,
+    "invalid_reference": 0.2,
+    "schema_error": 0.1,
+    "malformed": 0.1
+  },
+  "note": "Valores de ejemplo, no porcentajes observados ni datos reales. Configurar por productor/escenario."
+}

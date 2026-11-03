@@ -1,0 +1,95 @@
+archimate_id,type,name,gcp_technology,standard,documentation
+id-0035721989114a46af260434cddb641b,ApplicationComponent,Aplicaciones de Canal (Web / App / POS),,,Fuente operacional confirmada a nivel lógico. No se modelan componentes internos.
+id-2d98e7184d864505ada8234ec4163008,ApplicationComponent,Aplicación de Almacenes,,,Abstracción lógica de gestión de almacenes y preparación. Abstracción lógica de gestión de almacenes y preparación. Abstracción lógica del dominio de almacenes. No se asume un producto WMS específico.
+id-eca97d852e934d27ae81d2084767eb44,ApplicationComponent,Aplicación de Almacenes / Fulfillment,,,Aplicaciones que consumirán datos/insights expuestos por la plataforma.
+id-6f035f4ff39e439fb74c28159885419a,ApplicationComponent,Aplicación de Logística / Tracking,,,Aplicaciones que consumirán datos/insights expuestos por la plataforma.
+id-bcc854f3addb49b693e577f3aee3b59d,ApplicationComponent,Aplicación de Operaciones de Tienda,,,Aplicaciones que consumirán datos/insights expuestos por la plataforma.
+id-ad28f69f8f124a07afaeaa34fa411867,ApplicationComponent,App Cliente RetailSmart,,,Aplicaciones que consumirán datos/insights expuestos por la plataforma.
+id-3a59d6fbc5244f3291c82966ce770801,ApplicationComponent,Benchmark Competidores,,,
+id-0d32ea6519414a6f98c4e5a0c9dfc11f,ApplicationComponent,Construcción Mart Operativo,,,
+id-68f797120ee647dc9272b2367d134137,ApplicationComponent,Cámaras frigoríficas,,,
+id-031136a0c45048f0acb0fcd4bb07d1c6,ApplicationComponent,Dashboards de mantenimiento,,,Reportes y seguimiento operacional actuales. Reportes y seguimiento operacional actuales. Consumo de información operativa y analítica.
+id-5c67d35188a0484a9e31bfe5fe6f0b07,ApplicationComponent,ERP / Sistema de Inventario,,,Abstracción lógica del sistema de inventario y existencias. Fuente confirmada por el caso.
+id-290734d56ef8404a919c6b72b79d40ee,ApplicationComponent,Estantería Inteligente,,,Eventos de Stock
+id-461814f37ede4d7d9d13e8b3b9c600bb,ApplicationComponent,Eventos Locales,,,
+id-6116a2614a7e407c93b7ff0bd2ad7991,ApplicationComponent,Gold Insights Writer,,,únicamente consume y aterriza fielmente el evento.
+id-e50e426e0c1f4cc2b9ef3b06225d5937,ApplicationComponent,Herramienta de Reporting Operativo,,,Reportes y seguimiento operacional actuales. Reportes y seguimiento operacional actuales. Consumo de información operativa y analítica.
+id-16760d68431b4e2089bd8f255b2aa362,ApplicationComponent,Operaciones / Mantenimiento,,,Reportes y seguimiento operacional actuales. Reportes y seguimiento operacional actuales. Consumo de información operativa y analítica.
+id-c2395225593b4e51bab5b86a58835103,ApplicationComponent,Processing Audit Writer,,,únicamente consume y aterriza fielmente el evento.
+id-cbceef4cd402475eb0d338386e4abeb4,ApplicationComponent,Raw Event Writer,,,únicamente consume y aterriza fielmente el evento.
+id-fa827a45f6334d7fa81e4f81b7616bae,ApplicationComponent,Redes Sociales,,,
+id-a291f717742d4835af237a0e95417078,ApplicationComponent,Sensores IoT de Tienda,,,Eventos IoT
+id-0c42195fcc814ae285645d446ffad50f,ApplicationComponent,Sensores de almacén,,,
+id-ade5a96bb65a46f2b3cdd5e9eff89929,ApplicationComponent,Silver Event Writer,,,únicamente consume y aterriza fielmente el evento.
+id-0d9c6d206fe145c9a3c065d25584d022,ApplicationComponent,Sistema de Pedidos,,,Abstracción lógica del sistema responsable del ciclo operativo del pedido. Abstracción lógica del sistema responsable del ciclo operativo del pedido. Abstracción lógica del procesamiento de pedidos descrito en el caso.
+id-ead2c875fc784f32b2936634d1835f7a,ApplicationComponent,Tracking Logistico,,,"Abstracción lógica del dominio logístico, GPS y dispositivos de seguimiento."
+id-341f3ea9626f42ec9eaac9f88ed9f2d3,ApplicationComponent,[Batch Job] Ingesta Batch,,,
+id-eadcda4edc87498497635a69a15e5c6b,ApplicationComponent,[Batch Processor] Curación Batch,,,
+id-cb314e7661e048e484d3b628d1844326,ApplicationComponent,[Batch Processor] Planificación Diaria,,,
+id-1a3dfc8bd9854de0a8849f77a4aad478,ApplicationComponent,[ML Job] Entrenamiento Forecast,,,
+id-e9557140d239467f81cfbccfb9d08bbc,ApplicationComponent,[ML Job] Entrenamiento Mantenimiento Predictivo,,,
+id-6461173c49654d75af5218c55ac0ce49,ApplicationComponent,[Model] Modelo Mantenimiento Predictivo,,,
+id-72c6524cfb1043b9acadb9670d26e332,ApplicationComponent,[Model] Modelo de Demanda,,,
+id-02527c4db85d42cdb34e658ee8486bd7,ApplicationComponent,[Orchestrator] Planificador Batch,,,
+id-e357eedaa01944648c04fd32840fa0de,ApplicationComponent,[Stream Processor] Análisis de Telemetría y Mantenimiento Predictivo,,,"Procesamiento de baja latencia, valida, normaliza, deduplica y enruta."
+id-48761e22dab94d7991a6b735fbfd1c36,ApplicationComponent,[Stream Processor] Ingesta Streaming,,,"Procesamiento de baja latencia, valida, normaliza, deduplica y enruta."
+id-e9940092834c4a478c9d5fbd13bb560b,ApplicationComponent,[Stream Processor] Procesamiento Tiempo Real,,,obtener información/decisiones a partir del dato.
+id-299ba5ea959144fd91f09801bd1bd6b5,ApplicationInterface,API RetailSmart Insights,,,
+id-06a50771765247baa707619bc4139aff,ApplicationInterface,Consultar Insights Operativos,,,
+id-9bdbc1050fa147cd80c4f88c5883f4ac,ApplicationInterface,Consultar KPIs Operativos,,,
+id-fde7382703e944da90db3fc3eed8b5d2,ApplicationInterface,Consultar Planes de Inventario,,,
+id-1e266b1a5e504c55ba576d604d48055e,ApplicationInterface,Consultar Riesgos de Mantenimiento,,,
+id-3868fe3589cb41f2974d8ad67ced938c,DataObject,Audit Store,,,conserva el dato original.
+id-d93074f1706246829ca26298ff5bd13a,DataObject,Bronze Datos Batch,,,conserva el dato original.
+id-190c55ce48504ecb8595651fbd9fffcb,DataObject,Bronze Eventos Raw,,,conserva el dato original.
+id-9f8145133df1430d8d850b7eeae24269,DataObject,Gold Insights Retail,,,
+id-d3f2e8b983ce4693b3276a98749a348b,DataObject,Gold Maintenance Insights,,,
+id-a0333e6b2e13475bb7fd451f61c2f0ab,DataObject,Gold Operational Mart,,,
+id-0b69df89b9384c4bb74b1a74d374acce,DataObject,Gold Planes Inventario,,,
+id-611b769c98b842a5bc01d994df146a0b,DataObject,Silver Datos Curados,,,
+id-7dc51a4339184e2f82ff52d870a1d5f8,DataObject,Silver Eventos Curados,,,
+id-2fa596f576a84f6293c8fb4acbbcd23f,DataObject,Storage Landing Zone,,,
+id-140f81ba485645fd930ffaba7ced0cc6,DataObject,Tópico Auditoría de Procesamiento,,,
+id-3026609bb96a402c9efb172affde1a7f,DataObject,Tópico Eventos Retail,,,"Tópico de eventos para ingesta streaming.  Contrato Eventos Retail        │        ├── define click_event        ├── define stock_event        ├── define location_event        └── define iot_event"
+id-7fd767d5d89049af9cdd9ab57079acaa,DataObject,Tópico Insights Retail,,,
+id-507908114c08421395259d8e4d97432c,Grouping,ANALÍTICA Y CONSUMO,,,
+id-0314275d10f8423a924734e54ee2e3b8,Grouping,Analytical Layer,,,
+id-25a81c88c7744f3d93e0558b006e4aca,Grouping,Api Layer,,,
+id-ebddaa3df1b043e6be3e7212de624ca0,Grouping,Audit Layer,,,
+id-7347952d8d814b008c312328e8476867,Grouping,Bronze Layer,,,
+id-93171b3bf16742a3a6c093b9abb49067,Grouping,CANALES Y VENTAS,,,
+id-32c8798f4b4b4893bc61cfd852bad4d5,Grouping,DOMINIOS EXTERNOS,,,
+id-c13718a0fe3541559ef16dce9553ce62,Grouping,FUENTES EXTERNAS,,,
+id-f028313e75c3446f8ca075c6124761b0,Grouping,GOBIERNO UNIFICADO,,,
+id-d054dfc26121434ebb6ea0c8dbf9f164,Grouping,Gold Layer,,,
+id-717f8f9153994892813d7c4dd96dca00,Grouping,INVENTARIO Y FULFILLMENT,,,
+id-5c1b9d0826134f0d9a1ab9dd0d555a15,Grouping,Ingesta batch,,,
+id-0bb320caad92478da42932001471d979,Grouping,Ingesta de eventos,,,
+id-c60658c9c18849d1bc89c538b705b696,Grouping,LOGÍSTICA Y TRACKING,,,
+id-869ed55d4fda4915a80cd45991914b35,Grouping,Landing Zone,,,
+id-a2532068a6414d4880729f630dbad980,Grouping,Orquestación Batch,,,
+id-5f83adb398e34037bd9f60f690d65e07,Grouping,PLATAFORMA BIG DATA RETAILSMART,,,
+id-0d34cd74d70149b5b0a49752fd911e1f,Grouping,Procesamiento Streaming,,,
+id-99423d89b1274844a223f8a82db1a75a,Grouping,Procesamiento batch,,,
+id-8a7be8b1f86c4ce98fbec8a824ce9936,Grouping,Procesamiento predictivo,,,
+id-1a6ab4ef41ff41869318809c38d2ece6,Grouping,Silver Layer,,,
+id-296ccb2b09fe45ae94d44b36120e3e3e,TechnologyService,API RetailSmart Insights,Cloud Run,API Rest,
+id-91fc8e972e2e420e8a86c3afc6a260c8,TechnologyService,Audit Store,Cloud Logging + Observability Analytics,Observability / Technical Audit,"Implementación: Analytical audit store Tecnología GCP: BigQuery Comentario: Consultas por event_id, status, latencia"
+id-8ed726e0c2c14cbb8df73539854db157,TechnologyService,Auditoría de Procesamiento,Cloud Pub/Sub,Apache Kafka,Implementación: Apache Kafka Tecnología GCP: Managed Service for Apache Kafka Comentario: Otro topic en el mismo cluster
+id-ca5a5c0eabe44350bb9e644176c4a48b,TechnologyService,Bronze Layer,Cloud Storage,Data Lake / Object Storage,Implementación: Data Lake / object storage Tecnología GCP: Cloud Storage Comentario: Storage barato y escalable
+id-b873b655d9394c5cb6d286a02b8f5de1,TechnologyService,Entrenamiento Forecast,Dataproc,Apache Spark,
+id-5045ee70d35a4b9ca87e033bd486cbce,TechnologyService,Gobierno Datos,Knowledge Catalog,Catálogo · Metadata · Lineage,"Implementación: Analytical audit store Tecnología GCP: BigQuery Comentario: Consultas por event_id, status, latencia"
+id-b1194951ccb7415e9a6e977fd52c2789,TechnologyService,Gold Insights Retail,BigQuery,Data Product,"Implementación: Data Warehouse Tecnología GCP: BigQuery Comentario: KPIs, reporting y analítica"
+id-2f1d2779d6464c1383e5fbf375aab325,TechnologyService,Gold Operational Mart,BigQuery,SQL / OLAP,
+id-5a8ed19fd6f54f95904579b84f6473f4,TechnologyService,Herramienta de Reporting Operativo,Looker,BI / Analytics,"Implementación: Data Warehouse Tecnología GCP: BigQuery Comentario: KPIs, reporting y analítica"
+id-5fe0da5201764bba922e12e1e51ca367,TechnologyService,Ingesta Batch,Storage Transfer Service,Managed Data Transfer,
+id-2fe58104d85b4e32963decf9d8dba120,TechnologyService,Ingesta Streaming,Dataflow,Apache Beam,"Implementación: Apache Beam Tecnología GCP: Dataflow Streaming Comentario: Valida, normaliza y enruta"
+id-aebd71adcd8043299773ae5fa2d260eb,TechnologyService,Modelo de Demanda,Cloud Storage,Model Artifact,
+id-b31ac9e67a204bd2996043f98f93cec1,TechnologyService,Orquestación Batch,Managed Service for Apache Airflow,Apache Airflow,
+id-0c92d1c6db4b4a0d9b97e7771ab92e61,TechnologyService,Procesamiento Tiempo Real,Dataflow,Apache Beam,"Implementación: Apache Beam Tecnología GCP: Dataflow Streaming Job Comentario: Ventanas, estado y agregaciones"
+id-8bfb1065cbe54cb69edc49ac21e37d04,TechnologyService,Procesamiento batch,Dataproc,Apache Spark / PySpark,
+id-f1c2e447189e43febff98e7caa03c3ca,TechnologyService,Scoring + Planificación Diaria,Dataproc,Apache Spark / PySpark,
+id-f6ff7f9f26f14cc8ab051979cca0dad6,TechnologyService,Seguridad y Accesos,IAM · KMS · DLP,Seguridad · Clasificación,"Implementación: Analytical audit store Tecnología GCP: BigQuery Comentario: Consultas por event_id, status, latencia"
+id-010fe399b04e4f32beecd20d8dfd23c8,TechnologyService,Silver Layer,Cloud Storage,Data Lake / Lakehouse,"Implementación: Apache Iceberg + Parquet Tecnología GCP: Cloud Storage + Iceberg tables Comentario: Formato abierto, lakehouse"
+id-ded4a7cf707743008e148981bac087e2,TechnologyService,Tópico Eventos Retail,Cloud Pub/Sub,Apache Kafka,Implementación: Apache Kafka Tecnología GCP: Managed Service for Apache Kafka Comentario: Kafka OSS administrado por Google
+id-2629fa70f88949d4a1e76fb2fbbe4650,TechnologyService,Tópico Insights Retail,Cloud Pub/Sub,Apache Kafka,Implementación: Apache Kafka Tecnología GCP: Managed Service for Apache Kafka Comentario: Topic para insights
