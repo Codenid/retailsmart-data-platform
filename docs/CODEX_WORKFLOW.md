@@ -42,3 +42,4 @@
 - Evitar prompts generales como «implementa todo RetailSmart».
 - Partir una tarea si supera un PR revisable o toca más de un pipeline.
 - Referenciar IDs/CSV derivados de ArchiMate en lugar de pedir que inspeccione cada vez el archivo XML completo.
+- Para handoff a Codex Web, leer `STATUS.md` como estado operativo y conservar `docs/ROADMAP.md` y `backlog/BACKLOG.md` como fuente de verdad del plan.

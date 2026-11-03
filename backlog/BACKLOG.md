@@ -1,6 +1,6 @@
 # Backlog ordenado por dependencias
 
-**Estado real al crear este repositorio:** `RS-001` preparado localmente; todos los demás están `TODO`. Ningún recurso GCP creado. `Criterio de cierre` siempre incluye `código + pruebas + verificación manual en GCP + segunda ejecución segura` cuando corresponda.
+**Estado de referencia:** RS-003 a RS-005 completados y validados en `retailsmart-bigdata`. El ciclo de vida batch bajo demanda está preparado localmente, pero RS-006 sigue pendiente porque Composer y otros servicios de costo significativo no se han creado. `Criterio de cierre` siempre incluye `código + pruebas + verificación manual en GCP + segunda ejecución segura` cuando corresponda.
 
 | Issue | Gate | Entregable acotado | Depende | Estado |
 |---|---|---|---|---|
