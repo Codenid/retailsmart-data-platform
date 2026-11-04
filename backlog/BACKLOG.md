@@ -11,7 +11,7 @@
 | RS-005 | G1 | Mensajería: retail/audit/insights, subscriptions y políticas | RS-003 | COMPLETADO |
 | RS-006 | G1 | Dataflow, Dataproc, Airflow, BigQuery, Cloud Run, catálogo/seguridad: recursos y configuraciones + costo + status, sin jobs activos si no hay pruebas | RS-003/004/005 | COMPLETADO |
 | RS-007 | G2 | Fixture de seis productores streaming compatible con contratos | RS-002/005 | COMPLETADO |
-| RS-008 | G2 | Raw Event Writer: Pub/Sub → Bronze immutable, reintentos y auditabilidad | RS-004/005/007 | TODO |
+| RS-008 | G2 | Raw Event Writer: Pub/Sub → Bronze immutable, reintentos y auditabilidad | RS-004/005/007 | COMPLETADO |
 | RS-009 | G2 | Ingesta Streaming Beam/Dataflow → Silver, calidad/quarantine, DLQ | RS-006/007 | TODO |
 | RS-010 | G2 | Procesamiento tiempo real + insights; telemetría y mantenimiento base | RS-009 | TODO |
 | RS-011 | G2 | Gold Insights Writer + tópico Insights + pruebas streaming E2E | RS-010 | TODO |
