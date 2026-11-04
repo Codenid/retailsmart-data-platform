@@ -25,7 +25,7 @@ Proyecto: `retailsmart-bigdata`, región: `us-central1`.
 - Storage: cuatro buckets `retailsmart-dev-data-gcs-{landing,bronze,silver,models}-rsg`.
 - Pub/Sub: topics `rs-dev-str-ps-events`, `rs-dev-str-ps-insights`, `rs-dev-str-ps-audit`.
 - Pub/Sub: suscripciones raw, Dataflow, insights y auditoría.
-- Composer fue creado como `retailsmart-batch` y continúa en estado `CREATING`; aún no está validado como `RUNNING`. BigQuery ya tiene `retailsmart_gold_insights`, `retailsmart_operational_mart` y `retailsmart_audit` en `US`. APIs Composer, Data Catalog, KMS y DLP están habilitadas. Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos.
+- Composer fue creado como `retailsmart-batch` y está `RUNNING`, con Composer 3 / Airflow 2.11.1. BigQuery ya tiene `retailsmart_gold_insights`, `retailsmart_operational_mart` y `retailsmart_audit` en `US`. APIs Composer, Data Catalog, KMS y DLP están habilitadas. Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos porque corresponden a incrementos posteriores.
 
 ## Validaciones
 
@@ -36,6 +36,7 @@ Proyecto: `retailsmart-bigdata`, región: `us-central1`.
 - RS-004: segunda ejecución de Storage terminó `RC=0` sin duplicados.
 - RS-005: segunda ejecución de Pub/Sub terminó `RC=0` sin duplicados.
 - RS-006 parcial: tres datasets BigQuery creados y segunda ejecución terminó `RC=0` sin duplicados.
+- RS-006: Composer validado como `RUNNING`; no se ejecutan DAGs automáticamente.
 - Cloud Console/gcloud confirmó ubicación, acceso uniforme, prevención pública,
   topics, suscripciones, ack deadline y expiración.
 
@@ -87,9 +88,8 @@ datos reales ni estados locales en Git.
 
 ## Próxima tarea recomendada
 
-Continuar RS-006 cuando Composer pase a `RUNNING`: verificar consola y estado,
-registrar evidencia y preparar únicamente los componentes restantes declarados
-en el mapping GCP. No marcar RS-006 como completado mientras siga `CREATING`.
+RS-007 para fixtures streaming, o RS-012 para fixtures batch según la prioridad
+del equipo. Dataflow, Dataproc y DAGs se activarán en sus Issues dependientes.
 
 ## Git
 
