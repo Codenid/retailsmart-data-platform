@@ -1,0 +1,14 @@
+{
+  "channel-apps": {"order_id":"ORD-1","order_line_id":"ORD-1-L1","customer_id":"CUS-1","store_id":"STORE-1","product_id":"PROD-1","quantity":1,"unit_price":10,"currency":"USD","channel":"web","order_status":"created"},
+  "cold-storage-cameras": {"asset_id":"ASSET-1","sensor_id":"SENSOR-1","temperature_c":3,"humidity_pct":70},
+  "smart-shelf": {"store_id":"STORE-1","shelf_id":"SHELF-1","product_id":"PROD-1","quantity_visible":4,"stock_status":"available"},
+  "store-iot": {"store_id":"STORE-1","asset_id":"ASSET-2","sensor_id":"SENSOR-2","metric_name":"noise","metric_value":20,"metric_unit":"dB"},
+  "warehouse-sensors": {"warehouse_id":"WH-1","asset_id":"ASSET-3","sensor_id":"SENSOR-3","metric_name":"vibration","metric_value":2,"metric_unit":"mm_s","equipment_status":"operational"},
+  "logistics-tracking": {"delivery_id":"DEL-1","order_id":"ORD-1","vehicle_id":"VEH-1","latitude":-12.1,"longitude":-77.0,"status":"in_transit"},
+  "warehouse-app": {"warehouse_id":"WH-1","sku_id":"SKU-1","available_quantity":10,"reserved_quantity":2,"capacity_pct":50,"snapshot_at":"2026-11-03T23:59:59Z"},
+  "competitor-benchmark": {"competitor_id":"COMP-1","product_id":"PROD-1","region_id":"REG-1","observed_price":9.5,"currency":"USD","availability":true,"observed_at":"2026-11-03T23:59:59Z"},
+  "erp-inventory": {"warehouse_id":"WH-1","store_id":"STORE-1","product_id":"PROD-1","sku_id":"SKU-1","on_hand_quantity":10,"reserved_quantity":2,"reorder_point":5,"effective_at":"2026-11-03T23:59:59Z"},
+  "local-events": {"event_id":"LOC-1","region_id":"REG-1","event_type":"promotion","event_name":"Black Friday","starts_at":"2026-11-03T00:00:00Z","ends_at":"2026-11-03T23:59:59Z","expected_demand_factor":2},
+  "social-media": {"campaign_id":"CAMP-1","region_id":"REG-1","product_id":"PROD-1","mention_count":20,"sentiment_score":0.5,"trend_score":0.8,"effective_at":"2026-11-03T23:59:59Z"},
+  "orders-system": {"order_id":"ORD-1","order_line_id":"ORD-1-L1","customer_id":"CUS-1","store_id":"STORE-1","product_id":"PROD-1","quantity":1,"unit_price":10,"order_status":"confirmed","ordered_at":"2026-11-03T10:00:00Z"}
+}

@@ -6,4 +6,6 @@ Este directorio define el **protocolo propuesto**; debe aprobarse con el equipo 
 - `batch-manifest.example.json`: entrega de archivo, corte temporal, checksum, partición, versión.
 - `quality-profile.example.json`: tasas de defectos controladas (por productor/escenario).
 
-No confundir estos ejemplos con datasets ya implementados.
+RS-002 añade los contratos definitivos en `streaming/` y `batch/`, los esquemas
+comunes `streaming-envelope.schema.json` y `batch-manifest.schema.json`, y el
+diccionario `RS-002-DICCIONARIO.md`.

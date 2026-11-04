@@ -5,7 +5,7 @@
 | Issue | Gate | Entregable acotado | Depende | Estado |
 |---|---|---|---|---|
 | RS-001 | G0 | Bootstrap, vista 08, AGENTS.md y pruebas locales | — | PREPARADO |
-| RS-002 | G0 | Catálogo y 12 contratos; estados/IDs/manifest comunes al simulador | RS-001 | TODO |
+| RS-002 | G0 | Catálogo y 12 contratos; estados/IDs/manifest comunes al simulador | RS-001 | EN PROGRESO |
 | RS-003 | G1 | Config GCP, validaciones, APIs habilitadas, IAM base, budgets/alertas propuestas | RS-001 | COMPLETADO |
 | RS-004 | G1 | Storage: Landing/Bronze/Silver; buckets y estructuras idempotentes | RS-003 | COMPLETADO |
 | RS-005 | G1 | Mensajería: retail/audit/insights, subscriptions y políticas | RS-003 | COMPLETADO |
