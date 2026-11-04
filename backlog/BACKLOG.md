@@ -13,7 +13,7 @@
 | RS-007 | G2 | Fixture de seis productores streaming compatible con contratos | RS-002/005 | COMPLETADO |
 | RS-008 | G2 | Raw Event Writer: Pub/Sub → Bronze immutable, reintentos y auditabilidad | RS-004/005/007 | COMPLETADO |
 | RS-009 | G2 | Ingesta Streaming Beam/Dataflow → Silver, calidad/quarantine, DLQ | RS-006/007 | COMPLETADO |
-| RS-010 | G2 | Procesamiento tiempo real + insights; telemetría y mantenimiento base | RS-009 | TODO |
+| RS-010 | G2 | Procesamiento tiempo real + insights; telemetría y mantenimiento base | RS-009 | COMPLETADO |
 | RS-011 | G2 | Gold Insights Writer + tópico Insights + pruebas streaming E2E | RS-010 | TODO |
 | RS-012 | G3 | Fixtures/manifest para seis productores batch y landing | RS-002/004 | TODO |
 | RS-013 | G3 | Ingesta Batch planificada: Landing → Bronze, control `batch_id`/replay | RS-006/012 | TODO |
