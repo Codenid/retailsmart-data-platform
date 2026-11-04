@@ -1,0 +1,6 @@
+{
+  "valid_streaming": {"producer_id":"smart-shelf","event_id":"evt-1","payload":{"store_id":"STORE-001","shelf_id":"SHELF-001","product_id":"SKU-001","quantity_visible":4,"stock_status":"low"}},
+  "valid_batch": {"producer_id":"erp-inventory","batch_id":"batch-1","effective_at":"2026-11-03T23:59:59Z","cutoff_at":"2026-11-03T23:59:59Z","record":{"warehouse_id":"WH-001","store_id":"STORE-001","product_id":"PROD-001","sku_id":"SKU-001","on_hand_quantity":10,"reserved_quantity":2,"reorder_point":5,"effective_at":"2026-11-03T23:59:59Z"}},
+  "invalid_streaming": {"producer_id":"smart-shelf","event_id":"evt-invalid","payload":{"store_id":"STORE-001","shelf_id":"SHELF-001","product_id":"SKU-001","quantity_visible":-1,"stock_status":"unknown"}},
+  "invalid_batch": {"producer_id":"erp-inventory","batch_id":"batch-invalid","effective_at":"2026-11-04T00:00:00Z","cutoff_at":"2026-11-03T23:59:59Z"}
+}
