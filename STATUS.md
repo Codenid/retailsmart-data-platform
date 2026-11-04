@@ -25,7 +25,7 @@ Proyecto: `retailsmart-bigdata`, región: `us-central1`.
 - Storage: cuatro buckets `retailsmart-dev-data-gcs-{landing,bronze,silver,models}-rsg`.
 - Pub/Sub: topics `rs-dev-str-ps-events`, `rs-dev-str-ps-insights`, `rs-dev-str-ps-audit`.
 - Pub/Sub: suscripciones raw, Dataflow, insights y auditoría.
-- Composer fue creado como `retailsmart-batch` y está en estado `CREATING`; aún no está validado como `RUNNING`. Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos.
+- Composer fue creado como `retailsmart-batch` y continúa en estado `CREATING`; aún no está validado como `RUNNING`. BigQuery ya tiene `retailsmart_gold_insights`, `retailsmart_operational_mart` y `retailsmart_audit` en `US`. Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos.
 
 ## Validaciones
 
@@ -35,6 +35,7 @@ Proyecto: `retailsmart-bigdata`, región: `us-central1`.
 - `bash scripts/tests/test_batch_lifecycle.sh`: OK.
 - RS-004: segunda ejecución de Storage terminó `RC=0` sin duplicados.
 - RS-005: segunda ejecución de Pub/Sub terminó `RC=0` sin duplicados.
+- RS-006 parcial: tres datasets BigQuery creados y segunda ejecución terminó `RC=0` sin duplicados.
 - Cloud Console/gcloud confirmó ubicación, acceso uniforme, prevención pública,
   topics, suscripciones, ack deadline y expiración.
 
