@@ -16,7 +16,9 @@ gcloud composer environments describe retailsmart-batch \
 ```
 
 El entorno tiene costo fijo. Debe crearse solo durante una prueba o demo y no
-carga DAGs automáticamente.
+carga DAGs automáticamente. El script crea, si falta, la cuenta dedicada
+`rs-dev-batch-sa-composer@retailsmart-bigdata.iam.gserviceaccount.com` con
+`roles/composer.worker`; no genera claves.
 
 ## Destruir
 

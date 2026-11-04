@@ -25,7 +25,7 @@ Proyecto: `retailsmart-bigdata`, región: `us-central1`.
 - Storage: cuatro buckets `retailsmart-dev-data-gcs-{landing,bronze,silver,models}-rsg`.
 - Pub/Sub: topics `rs-dev-str-ps-events`, `rs-dev-str-ps-insights`, `rs-dev-str-ps-audit`.
 - Pub/Sub: suscripciones raw, Dataflow, insights y auditoría.
-- Composer, Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos.
+- Composer fue creado como `retailsmart-batch` y está en estado `CREATING`; aún no está validado como `RUNNING`. Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos.
 
 ## Validaciones
 
@@ -49,6 +49,7 @@ Proyecto: `retailsmart-bigdata`, región: `us-central1`.
 - Algunas consultas gcloud presentaron latencia y consistencia eventual; los
   scripts fueron optimizados para inventarios agrupados e idempotencia.
 - No ejecutar `destroy` sin `PROJECT_ID`, aprobación aplicable y confirmación.
+- Composer usa `rs-dev-batch-sa-composer@retailsmart-bigdata.iam.gserviceaccount.com` con `roles/composer.worker`; no se crearon claves.
 
 ## Archivos relevantes
 
@@ -85,9 +86,9 @@ datos reales ni estados locales en Git.
 
 ## Próxima tarea recomendada
 
-RS-006, respetando sus dependencias y límites de costo. Antes de crear Composer,
-mostrar el costo estimado y confirmar autorización; preparar status, create y
-destroy para los componentes de procesamiento declarados en el mapping GCP.
+Continuar RS-006 cuando Composer pase a `RUNNING`: verificar consola y estado,
+registrar evidencia y preparar únicamente los componentes restantes declarados
+en el mapping GCP. No marcar RS-006 como completado mientras siga `CREATING`.
 
 ## Git
 
