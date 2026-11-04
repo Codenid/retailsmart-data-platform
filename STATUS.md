@@ -25,7 +25,7 @@ Proyecto: `retailsmart-bigdata`, región: `us-central1`.
 - Storage: cuatro buckets `retailsmart-dev-data-gcs-{landing,bronze,silver,models}-rsg`.
 - Pub/Sub: topics `rs-dev-str-ps-events`, `rs-dev-str-ps-insights`, `rs-dev-str-ps-audit`.
 - Pub/Sub: suscripciones raw, Dataflow, insights y auditoría.
-- Composer fue creado como `retailsmart-batch` y continúa en estado `CREATING`; aún no está validado como `RUNNING`. BigQuery ya tiene `retailsmart_gold_insights`, `retailsmart_operational_mart` y `retailsmart_audit` en `US`. Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos.
+- Composer fue creado como `retailsmart-batch` y continúa en estado `CREATING`; aún no está validado como `RUNNING`. BigQuery ya tiene `retailsmart_gold_insights`, `retailsmart_operational_mart` y `retailsmart_audit` en `US`. APIs Composer, Data Catalog, KMS y DLP están habilitadas. Dataproc, Storage Transfer, Dataflow jobs y DAGs aún no están activos.
 
 ## Validaciones
 
