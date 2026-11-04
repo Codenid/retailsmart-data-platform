@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "simulation_id": "sim-20261103-001",
+  "scenario_id": "black-friday",
+  "producer_id": "smart-shelf",
+  "event_id": "evt-stream-0003",
+  "event_type": "stock_changed",
+  "occurred_at": "2026-11-03T10:00:00Z",
+  "emitted_at": "2026-11-03T10:00:00Z",
+  "trace_id": "trace-stream-0003",
+  "entity_type": "inventory",
+  "entity_id": "INV-1",
+  "payload": {
+    "store_id": "STORE-1",
+    "shelf_id": "SHELF-1",
+    "product_id": "PROD-1",
+    "quantity_visible": 4,
+    "quantity_estimated": 5,
+    "stock_status": "low",
+    "replenishment_required": true
+  },
+  "quality": {
+    "is_projected_defect": false,
+    "original_record_id": null,
+    "defect_type": null,
+    "defect_seed": null
+  }
+}

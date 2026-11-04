@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "simulation_id": "sim-20261103-001",
+  "scenario_id": "black-friday",
+  "producer_id": "logistics-tracking",
+  "event_id": "evt-stream-0006",
+  "event_type": "delivery_location",
+  "occurred_at": "2026-11-03T10:00:00Z",
+  "emitted_at": "2026-11-03T10:00:00Z",
+  "trace_id": "trace-stream-0006",
+  "entity_type": "delivery",
+  "entity_id": "DEL-1",
+  "payload": {
+    "delivery_id": "DEL-1",
+    "order_id": "ORD-1",
+    "vehicle_id": "VEH-1",
+    "latitude": -12.1,
+    "longitude": -77.0,
+    "status": "in_transit"
+  },
+  "quality": {
+    "is_projected_defect": false,
+    "original_record_id": null,
+    "defect_type": null,
+    "defect_seed": null
+  }
+}

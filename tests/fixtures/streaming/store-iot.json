@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "simulation_id": "sim-20261103-001",
+  "scenario_id": "black-friday",
+  "producer_id": "store-iot",
+  "event_id": "evt-stream-0004",
+  "event_type": "store_telemetry",
+  "occurred_at": "2026-11-03T10:00:00Z",
+  "emitted_at": "2026-11-03T10:00:00Z",
+  "trace_id": "trace-stream-0004",
+  "entity_type": "sensor",
+  "entity_id": "SENSOR-2",
+  "payload": {
+    "store_id": "STORE-1",
+    "asset_id": "ASSET-2",
+    "sensor_id": "SENSOR-2",
+    "metric_name": "noise",
+    "metric_value": 20,
+    "metric_unit": "dB",
+    "battery_pct": 92
+  },
+  "quality": {
+    "is_projected_defect": false,
+    "original_record_id": null,
+    "defect_type": null,
+    "defect_seed": null
+  }
+}

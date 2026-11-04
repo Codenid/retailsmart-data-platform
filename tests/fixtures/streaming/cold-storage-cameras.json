@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "simulation_id": "sim-20261103-001",
+  "scenario_id": "black-friday",
+  "producer_id": "cold-storage-cameras",
+  "event_id": "evt-stream-0002",
+  "event_type": "temperature_reading",
+  "occurred_at": "2026-11-03T10:00:00Z",
+  "emitted_at": "2026-11-03T10:00:00Z",
+  "trace_id": "trace-stream-0002",
+  "entity_type": "asset",
+  "entity_id": "ASSET-1",
+  "payload": {
+    "asset_id": "ASSET-1",
+    "sensor_id": "SENSOR-1",
+    "store_id": "STORE-1",
+    "temperature_c": 3,
+    "humidity_pct": 70,
+    "door_open": false,
+    "reading_quality": "valid"
+  },
+  "quality": {
+    "is_projected_defect": false,
+    "original_record_id": null,
+    "defect_type": null,
+    "defect_seed": null
+  }
+}

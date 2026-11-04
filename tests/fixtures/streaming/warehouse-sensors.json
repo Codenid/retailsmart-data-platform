@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "simulation_id": "sim-20261103-001",
+  "scenario_id": "black-friday",
+  "producer_id": "warehouse-sensors",
+  "event_id": "evt-stream-0005",
+  "event_type": "warehouse_telemetry",
+  "occurred_at": "2026-11-03T10:00:00Z",
+  "emitted_at": "2026-11-03T10:00:00Z",
+  "trace_id": "trace-stream-0005",
+  "entity_type": "sensor",
+  "entity_id": "SENSOR-3",
+  "payload": {
+    "warehouse_id": "WH-1",
+    "asset_id": "ASSET-3",
+    "sensor_id": "SENSOR-3",
+    "metric_name": "vibration",
+    "metric_value": 2,
+    "metric_unit": "mm_s",
+    "equipment_status": "operational"
+  },
+  "quality": {
+    "is_projected_defect": false,
+    "original_record_id": null,
+    "defect_type": null,
+    "defect_seed": null
+  }
+}

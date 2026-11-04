@@ -15,7 +15,7 @@ Se prepararon scripts de ciclo de vida batch bajo demanda para el componente
 `id-b31ac9e67a204bd2996043f98f93cec1` (Orquestación Batch / Managed Service for
 Apache Airflow / Cloud Composer). No se creó Composer ni se eliminaron recursos.
 
-RS-002, RS-003, RS-004, RS-005 y RS-006 están completados en su alcance actual.
+RS-002, RS-003, RS-004, RS-005, RS-006 y RS-007 están completados en su alcance actual.
 RS-002 está validado localmente y no despliega GCP.
 
 ## Infraestructura operativa
@@ -89,7 +89,7 @@ datos reales ni estados locales en Git.
 
 ## Próxima tarea recomendada
 
-RS-007 para fixtures streaming, o RS-012 para fixtures batch según la prioridad
+RS-008 para Raw Event Writer, o RS-012 para fixtures batch según la prioridad
 del equipo. Dataflow, Dataproc y DAGs se activarán en sus Issues dependientes.
 
 ## Git
