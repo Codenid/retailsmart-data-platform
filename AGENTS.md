@@ -62,3 +62,4 @@ El estado operativo para continuar en Codex Web está en `STATUS.md`; el roadmap
 - Respetar dependencias, implementar, probar, verificar, documentar y registrar cada incremento antes de continuar al siguiente.
 - Dentro de la fase de aprovisionamiento autorizada, avanzar automáticamente entre tareas; mantener máximo tres intentos de corrección por fallo.
 - Evitar exploraciones repetitivas o cambios fuera del alcance; registrar avance en el backlog y realizar un commit por incremento.
+- Cuando una tarea termine correctamente, con pruebas y validación completadas, crear un commit con mensaje en español y publicarlo inmediatamente en `origin/main`. No publicar tareas incompletas, bloqueadas o no validadas.
